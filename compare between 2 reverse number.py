@@ -1,3 +1,6 @@
+# in this program, we have 2 numbers and we want to reverse them and then compare them.
+# Good luck!
+
 a = int(input())
 aInput = a
 sum = 0
