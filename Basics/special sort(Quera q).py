@@ -24,20 +24,19 @@ def swap(lst1, index_1, index_2):
     temp = lst1[index_1]
     lst1[index_1] = lst1[index_2]
     lst1[index_2] = temp
-    return lst1
 
 
 def my_sort(list):
     for i in range(n):
         min = i
         for j in range(i, n):
-            if list[min][1] > list[j][1]:
+            if list[min][1] > list[j][1]:  # average
                 min = j
             elif list[min][1] == list[j][1]:
-                if list[min][2] > list[j][2]:
+                if list[min][2] > list[j][2]:  # sport
                     min = j
                 elif list[min][2] == list[j][2]:
-                    if list[min][3] < list[j][3]:
+                    if list[min][3] < list[j][3]:  # input order
                         min = j
         swap(list, i, min)
 
@@ -61,4 +60,3 @@ for i in range(n):
 my_sort(main_list)
 for i in range(n):
     print(main_list[n - i - 1][0])
-
