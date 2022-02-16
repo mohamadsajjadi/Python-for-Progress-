@@ -12,3 +12,4 @@ def solve(path):
 
 path = open('info.txt', 'r')
 print(solve(path))
+
