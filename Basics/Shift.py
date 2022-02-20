@@ -1,4 +1,4 @@
-# We have a number that are in sequence
+# We have A number that are in sequence
 # each series we want to bring the last element to the first and print the numbers.
 # To do this, we use an array.
 

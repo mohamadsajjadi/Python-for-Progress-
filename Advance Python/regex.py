@@ -2,7 +2,7 @@ import re
 
 
 def validate_email(email):
-    if re.match(r'^[a-zA-Z1-9\.\_]+@[a-zA-Z1-9]+\.[a-zA-Z]{3}$', email):
+    if re.match(r'^[A-zA-Z1-9\.\_]+@[A-zA-Z1-9]+\.[A-zA-Z]{3}$', email):
         return True
     else:
         return False

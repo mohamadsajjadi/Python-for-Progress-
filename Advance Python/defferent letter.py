@@ -7,7 +7,7 @@
 
 # result
 # 5
-# Print a number on the only output line that is equal to the number of different letters in the selected name.
+# Print A number on the only output line that is equal to the number of different letters in the selected name.
 
 n = int(input())
 max = 0
