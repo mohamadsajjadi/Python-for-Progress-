@@ -17,5 +17,4 @@ def explore(ttype, address):
             continue
     print(dic)
 
-os.path.r
-explore('txt', "sample_test_media/A")
+    explore('txt', "sample_test_media/A")
