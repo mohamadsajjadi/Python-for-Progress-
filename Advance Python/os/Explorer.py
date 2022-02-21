@@ -4,6 +4,7 @@ import re
 
 def explore(ttype, address):
     ttype = '.' + ttype
+    ttype = ttype.lower()
     dic = dict()
     var = list(os.walk(address))
     for item in var:
