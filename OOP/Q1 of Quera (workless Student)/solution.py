@@ -15,14 +15,10 @@ class Pharmacy:
         self.drugs.append(drug)
 
     def add_employee(self, first_name, last_name, age):
-        var = dict()
-        var['first_name'] = first_name
-        var['last_name'] = last_name
-        var['age'] = age
-        for item in self.employees:
-            if item["first_name"] == first_name and item["last_name"] == last_name and item["age"] == age:
-                return
-        self.employees.append(var)
+        self.employees.append({
+            "firstname": first_name,
+            "lastname": last_name,
+            "age": age})
 
     def total_value(self):
         sum = 0
@@ -33,9 +29,8 @@ class Pharmacy:
     def employees_summary(self):
         string = 'Employees:\n'
         for i in range(len(self.employees)):
-            string += f"The employee number {i + 1} is {self.employees[i]['first_name']} {self.employees[i]['last_name']} who is {self.employees[i]['age']} years old.\n"
+            string += f"The employee number {i + 1} is {self.employees['first_name']} {self.employees['last_name']} who is {self.employees['age']} years old.\n"
         return string
-
 
 # drug1 = Drug("T1", 10, 1000)
 # drug2 = Drug("T2", 20, 2000)
