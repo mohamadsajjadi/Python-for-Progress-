@@ -41,5 +41,4 @@ class Person:
         return sum
 
 
-ali = Person('ali', 21)
-print(ali.level)
+
