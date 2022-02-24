@@ -28,4 +28,4 @@ def g():
 tr_ls = transform_exceptions([f, g])
 
 for exception in tr_ls:
-    print("msg: " + exception.msg + "\nfunction name: " + exception.function.__name__)
+    print("msg: " + exception.msg + "\nfunction name: " + exception.function.__name__   )
