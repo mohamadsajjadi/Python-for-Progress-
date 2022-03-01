@@ -1,4 +1,4 @@
-from termcolor import colored
+from errors import Errors
 
 
 class Player:
@@ -27,7 +27,7 @@ class Player:
     def print_player_info(character):
         p_id = character
         if not p_id in Player.player_id:
-            print(colored("player doesnt exist", 'red'))
+            Errors.player_does_not_exist('buy', p_id)
         else:
             print(f'player : {Player.player[p_id].name}\n'
                   f'price : {Player.player[p_id].price}\n'

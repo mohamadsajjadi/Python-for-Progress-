@@ -1,4 +1,4 @@
-from termcolor import colored
+from errors import Errors
 
 
 class Team:
@@ -40,21 +40,21 @@ class Team:
 
     def add_player_in_team(self, player):
         if player.status != 'free':
-            print(colored("this player is unavailable", 'red'))
+            Errors.player_unavailable()
         elif player.index in self.player_index:
-            print(colored("this player is already exist!", 'red'))
+            Errors.another_name(player.index)
         else:
             self.player_index.append(player.index)
             self.player.append(player)
-            print(colored("player added to the team successfully", 'green'))
+            Errors.successfully_add()
 
     def sell_player(self, player):
         if Team.is_exist_player(self, player.index):
             self.player_index.remove(player.index)
             self.player.remove(player)
-            print(colored("player sold successfully", 'blue'))
+            Errors.sold_successfully(player.index)
         else:
-            print(colored("team doest have this player", 'red'))
+            Errors.player_does_not_exist('sell', None)
 
     def print_player_of_each_team(index):
         print(Team.teams[index].player_index)
@@ -108,6 +108,15 @@ class Team:
         lst = sorted_list[::-1]
         for item in lst:
             print(item[0], end=' ')
+
+    def print_team_info(team_id):
+        t_id = team_id
+        print(f"team : {Team.teams[t_id].name}\n"
+              f"money : {Team.teams[t_id].money}\nPlayers : ", end='')
+        print(*Team.teams[t_id].player_index)
+        print(f'win : {Team.teams[t_id].win}\n'
+              f'draw : {Team.teams[t_id].draw}\n'
+              f'loose : {Team.teams[t_id].lost}')
 
     @staticmethod
     def print_teams():
