@@ -69,7 +69,7 @@ while True:
             team_id = int(character[2]) - 1
             player_id = int(character[1]) - 1
             if int(character[1]) > len(Player.players_name):
-               er Errors.play_does_not_exist(character[0], character[1])
+                Errors.play_does_not_exist(character[0], character[1])
             elif int(character[2]) > len(Team.teams_name):
                 Errors.team_does_not_exist(character[2])
             elif Team.teams[team_id].money < Player.player[player_id].price:
