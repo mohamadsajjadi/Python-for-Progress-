@@ -3,13 +3,13 @@ from threading import Thread
 
 
 def sol(func):
-    threads = []
+    thread = []
     for i in range(len(func)):
-        threads.append(Thread(target=func[i], name=str(i + 1)))
-    for t in threads:
-        t.start()
-    for t in threads:
-        t.join()
+        thread.append(Thread(name=str(i + 1), target=func[i]))
+    for item in thread:
+        item.start()
+    for item in thread:
+        item.join()
 
 
 def solve():
