@@ -27,7 +27,6 @@ def complicated_calculation(m, ls):
     last_list = []
     for item in my_list:
         last_list.append(sum(item))
-    # print(last_list)
     return simple_calculations(last_list)
 
 
