@@ -28,6 +28,4 @@ def fruits(fruit_list):
 
 print(fruits(x))
 
-# my_dic = dict()
-# my_dic["ali"] += 1
-# print(my_dic)
+
