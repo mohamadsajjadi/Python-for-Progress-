@@ -1,3 +1,12 @@
+# از شما می‌خواهیم تابعی بنویسید که با گرفتن آدرس نسبی یک برنامه پایتون، تعداد خطوطی از آن که دارای دستور هستند را تشخیص دهد.
+# test case
+# a = input()
+#
+# b = int(a)
+# print(b * b, a + a)
+#   #if a = 3 output is 33.
+# result
+# 3
 def solve(path):
     path1 = open(path, 'r')
     lst = list()
@@ -12,4 +21,3 @@ def solve(path):
 
 path = open('info.txt', 'r')
 print(solve(path))
-
