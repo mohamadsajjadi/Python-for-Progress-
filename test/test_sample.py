@@ -1,24 +1,15 @@
-def outer_func(fname, lname):
-    def main_func(func):
-        def inner_func():
-            if fname == firstname and lname == lastname:
-                f = func()
-                return f
-            else:
-                print("fuck")
-
-        return inner_func
-
-    return main_func
+def get_func(my_list):
+    my_dic = {
+        "age": lambda x: f"Ali is {x} years old",
+        "name": lambda x: f"My name is {x}",
+        "live": lambda x: "he is alive" if x else "he is dead"
+    }
+    return [my_dic.get(func) for func in my_dic]
 
 
-firstname = input("Enter your firstname:\n")
-lastname = input("Enter your lastname:\n")
+ls = get_func(['age', 'name', 'live'])
 
-
-@outer_func(firstname, lastname)
-def login():
-    print("you are my friend!")
-
-
-login()
+print(ls[0](13))
+print(ls[1]('Sadegh'))
+print(ls[2](True))
+print(ls[2](False))
