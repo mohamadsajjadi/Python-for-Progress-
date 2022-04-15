@@ -1,15 +1,8 @@
-def get_func(my_list):
-    my_dic = {
-        "age": lambda x: f"Ali is {x} years old",
-        "name": lambda x: f"My name is {x}",
-        "live": lambda x: "he is alive" if x else "he is dead"
-    }
-    return [my_dic.get(func) for func in my_dic]
+import re
 
-
-ls = get_func(['age', 'name', 'live'])
-
-print(ls[0](13))
-print(ls[1]('Sadegh'))
-print(ls[2](True))
-print(ls[2](False))
+s = "Twitter:www.twiter.com/alaviii Instagram:www.instagram.com/aalavi Degree:Master imdb:www.imdb.com/alavi"
+s = s.split()
+for item in s:
+    print(re.findall(r"^[A-Z][a-z]+:www\.[a-z0-9\.]+\/[a-z0-9\_]+", item))
+    item=item.split("/")[1]
+    print(item)
